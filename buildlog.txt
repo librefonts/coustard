@@ -1,0 +1,952 @@
+# Bake Begins!
+### (1 of 6) Copy sources
+$ cp -a /home/travis/build/fontdirectory/coustard/METADATA.json /home/travis/build/fontdirectory/coustard/builds/build
+$ cp -a /home/travis/build/fontdirectory/coustard/DESCRIPTION.en_us.html /home/travis/build/fontdirectory/coustard/builds/build
+$ cp -a Coustard-Regular.ttf.ttx Coustard-Black.ttf.ttx src/Coustard-Regular.otf.ttx src/Coustard-Black.otf.ttx src/Coustard-Regular.sfd src/Coustard-Regular-TTF.sfd src/Coustard-Heavy.sfd src/Coustard-Black-TTF.sfd Coustard-Regular.ttf._p_r_e_p.ttx Coustard-Regular.ttf._p_o_s_t.ttx Coustard-Regular.ttf._n_a_m_e.ttx Coustard-Regular.ttf._m_a_x_p.ttx Coustard-Regular.ttf._l_o_c_a.ttx Coustard-Regular.ttf._h_m_t_x.ttx Coustard-Regular.ttf._h_h_e_a.ttx Coustard-Regular.ttf._h_e_a_d.ttx Coustard-Regular.ttf._g_l_y_f.ttx Coustard-Regular.ttf._g_a_s_p.ttx Coustard-Regular.ttf._f_p_g_m.ttx Coustard-Regular.ttf._c_v_t.ttx Coustard-Regular.ttf._c_m_a_p.ttx Coustard-Regular.ttf.O_S_2f_2.ttx Coustard-Regular.ttf.GlyphOrder.ttx Coustard-Regular.ttf.G_S_U_B_.ttx Coustard-Regular.ttf.G_P_O_S_.ttx Coustard-Regular.ttf.G_D_E_F_.ttx Coustard-Regular.ttf.F_F_T_M_.ttx Coustard-Black.ttf._p_r_e_p.ttx Coustard-Black.ttf._p_o_s_t.ttx Coustard-Black.ttf._n_a_m_e.ttx Coustard-Black.ttf._m_a_x_p.ttx Coustard-Black.ttf._l_o_c_a.ttx Coustard-Black.ttf._h_m_t_x.ttx Coustard-Black.ttf._h_h_e_a.ttx Coustard-Black.ttf._h_e_a_d.ttx Coustard-Black.ttf._g_l_y_f.ttx Coustard-Black.ttf._g_a_s_p.ttx Coustard-Black.ttf._f_p_g_m.ttx Coustard-Black.ttf._c_v_t.ttx Coustard-Black.ttf._c_m_a_p.ttx Coustard-Black.ttf.O_S_2f_2.ttx Coustard-Black.ttf.GlyphOrder.ttx Coustard-Black.ttf.G_S_U_B_.ttx Coustard-Black.ttf.G_P_O_S_.ttx Coustard-Black.ttf.G_D_E_F_.ttx Coustard-Black.ttf.F_F_T_M_.ttx src/Coustard-Regular.otf._p_o_s_t.ttx src/Coustard-Regular.otf._n_a_m_e.ttx src/Coustard-Regular.otf._m_a_x_p.ttx src/Coustard-Regular.otf._h_m_t_x.ttx src/Coustard-Regular.otf._h_h_e_a.ttx src/Coustard-Regular.otf._h_e_a_d.ttx src/Coustard-Regular.otf._c_m_a_p.ttx src/Coustard-Regular.otf.O_S_2f_2.ttx src/Coustard-Regular.otf.GlyphOrder.ttx src/Coustard-Regular.otf.G_S_U_B_.ttx src/Coustard-Regular.otf.G_P_O_S_.ttx src/Coustard-Regular.otf.G_D_E_F_.ttx src/Coustard-Regular.otf.F_F_T_M_.ttx src/Coustard-Regular.otf.C_F_F_.ttx src/Coustard-Black.otf._p_o_s_t.ttx src/Coustard-Black.otf._n_a_m_e.ttx src/Coustard-Black.otf._m_a_x_p.ttx src/Coustard-Black.otf._h_m_t_x.ttx src/Coustard-Black.otf._h_h_e_a.ttx src/Coustard-Black.otf._h_e_a_d.ttx src/Coustard-Black.otf._c_m_a_p.ttx src/Coustard-Black.otf.O_S_2f_2.ttx src/Coustard-Black.otf.GlyphOrder.ttx src/Coustard-Black.otf.G_S_U_B_.ttx src/Coustard-Black.otf.G_P_O_S_.ttx src/Coustard-Black.otf.G_D_E_F_.ttx src/Coustard-Black.otf.F_F_T_M_.ttx src/Coustard-Black.otf.C_F_F_.ttx src/Coustard-Regular.otf.ttx src/Coustard-Regular.otf._p_o_s_t.ttx src/Coustard-Regular.otf._n_a_m_e.ttx src/Coustard-Regular.otf._m_a_x_p.ttx src/Coustard-Regular.otf._h_m_t_x.ttx src/Coustard-Regular.otf._h_h_e_a.ttx src/Coustard-Regular.otf._h_e_a_d.ttx src/Coustard-Regular.otf._c_m_a_p.ttx src/Coustard-Regular.otf.O_S_2f_2.ttx src/Coustard-Regular.otf.GlyphOrder.ttx src/Coustard-Regular.otf.G_S_U_B_.ttx src/Coustard-Regular.otf.G_P_O_S_.ttx src/Coustard-Regular.otf.G_D_E_F_.ttx src/Coustard-Regular.otf.F_F_T_M_.ttx src/Coustard-Regular.otf.C_F_F_.ttx /home/travis/build/fontdirectory/coustard/builds/build/sources
+### (2 of 6) pyfontaine
+### (3 of 6) Run upstream tests
+$ fontbakery-check.py upstream-repo sources
+$ fontaine --collections subsets --text /home/travis/build/fontdirectory/coustard/builds/build/sources/Coustard-Regular.otf.ttx /home/travis/build/fontdirectory/coustard/builds/build/sources/Coustard-Black.otf.ttx /home/travis/build/fontdirectory/coustard/builds/build/sources/Coustard-Black.ttf.ttx /home/travis/build/fontdirectory/coustard/builds/build/sources/Coustard-Regular.ttf.ttx /home/travis/build/fontdirectory/coustard/builds/build/sources/Coustard-Black-TTF.sfd /home/travis/build/fontdirectory/coustard/builds/build/sources/Coustard-Heavy.sfd /home/travis/build/fontdirectory/coustard/builds/build/sources/Coustard-Regular-TTF.sfd /home/travis/build/fontdirectory/coustard/builds/build/sources/Coustard-Regular.sfd > fontaine.txt
+WARNING: Please install [PyICU](https://pypi.python.org/pypi/PyICU) toenable [feature], perhaps with: pip install pyicu
+bakery_lint.tests.upstream.test_prepolation.FontTestPrepolation.test_font_prepolation_glyph_contours(): OK
+pyfontaine error: Not a TrueType or OpenType font (bad sfntVersion)
+pyfontaine process has been failed
+bakery_lint.tests.upstream.test_prepolation.FontTestPrepolation.test_font_prepolation_glyph_points(): OK
+bakery_lint.tests.upstream.test_prepolation.FontTestPrepolation.test_font_test_prepolation_glyph_names(): OK
+bakery_lint.tests.upstream.test_diacritic.TestDiacritic.test_diacritic_made_as_component(): OK
+bakery_lint.tests.upstream.test_diacritic.TestDiacritic.test_diacritic_made_as_mark_to_mark(): OK
+bakery_lint.tests.upstream.test_diacritic.TestDiacritic.test_diacritic_made_as_own_glyphs(): OK
+bakery_lint.tests.upstream.test_check_upstream_sources.ProjectUpstreamTestCase.test_bakery_yaml_exists(): OK
+bakery_lint.tests.upstream.test_check_upstream_sources.ProjectUpstreamTestCase.test_copyright_notices_same_across_family(): OK
+bakery_lint.tests.upstream.test_check_upstream_sources.ProjectUpstreamTestCase.test_description_html_exists(): OK
+bakery_lint.tests.upstream.test_check_upstream_sources.ProjectUpstreamTestCase.test_fontlog_txt_exists(): FAIL
+bakery_lint.tests.upstream.test_check_upstream_sources.ProjectUpstreamTestCase.test_metadata_json_exists(): OK
+$ fontbakery-check.py upstream-ttx Coustard-Regular.otf.ttx
+bakery_lint.tests.upstream.test_glyphname_does_not_contain_disallowed_chars.TestGlyphNameDoesNotContainsDisallowedChars.test_glyphname_does_not_contain_disallowed_chars(): OK
+bakery_lint.tests.upstream.test_font_filename_eq_familystyle.TestTTFSourceFontFileNameEqualsFamilyStyle.test_source_ttf_font_filename_equals_familystyle(): FAIL
+$ mv /home/travis/build/fontdirectory/coustard/builds/build/sources/Coustard-Regular.otf.ttx /home/travis/build/fontdirectory/coustard/builds/build/sources/Coustard-Regular.ttx
+bakery_lint.tests.upstream.test_font_filename_eq_familystyle.TestTTFSourceFontFileNameEqualsFamilyStyle.test_source_ttf_font_filename_equals_familystyle(): OK
+bakery_lint.tests.upstream.test_check_ttx_requirements.SourceTTXTest.test_epar_in_keys(): FAIL
+bakery_lint.tests.upstream.test_check_ttx_requirements.SourceTTXTest.test_os2_in_keys(): OK
+bakery_lint.tests.upstream.test_check_ttx_requirements.SourceTTXTest.test_ttx_doesnt_contain_duplicate_glyphs(): OK
+bakery_lint.tests.upstream.test_check_ttx_fontfamily_recommendations.TTX_FontFamilyNamingTest.test_ttx_family_naming_recommendation(): OK
+$ fontbakery-check.py upstream-ttx Coustard-Black.otf.ttx
+bakery_lint.tests.upstream.test_glyphname_does_not_contain_disallowed_chars.TestGlyphNameDoesNotContainsDisallowedChars.test_glyphname_does_not_contain_disallowed_chars(): OK
+bakery_lint.tests.upstream.test_font_filename_eq_familystyle.TestTTFSourceFontFileNameEqualsFamilyStyle.test_source_ttf_font_filename_equals_familystyle(): FAIL
+$ mv /home/travis/build/fontdirectory/coustard/builds/build/sources/Coustard-Black.otf.ttx /home/travis/build/fontdirectory/coustard/builds/build/sources/Coustard-Bold.ttx
+bakery_lint.tests.upstream.test_font_filename_eq_familystyle.TestTTFSourceFontFileNameEqualsFamilyStyle.test_source_ttf_font_filename_equals_familystyle(): OK
+bakery_lint.tests.upstream.test_check_ttx_requirements.SourceTTXTest.test_epar_in_keys(): FAIL
+bakery_lint.tests.upstream.test_check_ttx_requirements.SourceTTXTest.test_os2_in_keys(): OK
+bakery_lint.tests.upstream.test_check_ttx_requirements.SourceTTXTest.test_ttx_doesnt_contain_duplicate_glyphs(): OK
+bakery_lint.tests.upstream.test_check_ttx_fontfamily_recommendations.TTX_FontFamilyNamingTest.test_ttx_family_naming_recommendation(): OK
+$ fontbakery-check.py upstream-ttx Coustard-Black.ttf.ttx
+bakery_lint.tests.upstream.test_glyphname_does_not_contain_disallowed_chars.TestGlyphNameDoesNotContainsDisallowedChars.test_glyphname_does_not_contain_disallowed_chars(): OK
+bakery_lint.tests.upstream.test_font_filename_eq_familystyle.TestTTFSourceFontFileNameEqualsFamilyStyle.test_source_ttf_font_filename_equals_familystyle(): FAIL
+$ mv /home/travis/build/fontdirectory/coustard/builds/build/sources/Coustard-Black.ttf.ttx /home/travis/build/fontdirectory/coustard/builds/build/sources/Coustard-Bold.ttx
+bakery_lint.tests.upstream.test_font_filename_eq_familystyle.TestTTFSourceFontFileNameEqualsFamilyStyle.test_source_ttf_font_filename_equals_familystyle(): OK
+bakery_lint.tests.upstream.test_check_ttx_requirements.SourceTTXTest.test_epar_in_keys(): FAIL
+bakery_lint.tests.upstream.test_check_ttx_requirements.SourceTTXTest.test_os2_in_keys(): OK
+bakery_lint.tests.upstream.test_check_ttx_requirements.SourceTTXTest.test_ttx_doesnt_contain_duplicate_glyphs(): OK
+bakery_lint.tests.upstream.test_check_ttx_fontfamily_recommendations.TTX_FontFamilyNamingTest.test_ttx_family_naming_recommendation(): OK
+$ fontbakery-check.py upstream-ttx Coustard-Regular.ttf.ttx
+bakery_lint.tests.upstream.test_glyphname_does_not_contain_disallowed_chars.TestGlyphNameDoesNotContainsDisallowedChars.test_glyphname_does_not_contain_disallowed_chars(): OK
+bakery_lint.tests.upstream.test_font_filename_eq_familystyle.TestTTFSourceFontFileNameEqualsFamilyStyle.test_source_ttf_font_filename_equals_familystyle(): FAIL
+$ mv /home/travis/build/fontdirectory/coustard/builds/build/sources/Coustard-Regular.ttf.ttx /home/travis/build/fontdirectory/coustard/builds/build/sources/Coustard-Regular.ttx
+bakery_lint.tests.upstream.test_font_filename_eq_familystyle.TestTTFSourceFontFileNameEqualsFamilyStyle.test_source_ttf_font_filename_equals_familystyle(): OK
+bakery_lint.tests.upstream.test_check_ttx_requirements.SourceTTXTest.test_epar_in_keys(): FAIL
+bakery_lint.tests.upstream.test_check_ttx_requirements.SourceTTXTest.test_os2_in_keys(): OK
+bakery_lint.tests.upstream.test_check_ttx_requirements.SourceTTXTest.test_ttx_doesnt_contain_duplicate_glyphs(): OK
+bakery_lint.tests.upstream.test_check_ttx_fontfamily_recommendations.TTX_FontFamilyNamingTest.test_ttx_family_naming_recommendation(): OK
+$ fontbakery-check.py upstream Coustard-Black-TTF.sfd
+bakery_lint.tests.upstream.test_unicode_value_should_appear_only_once_per_font.UnicodeValueShouldAppearOnlyOnce.testUnicodeValue(): ERROR
+bakery_lint.tests.upstream.test_font_filename_eq_familystyle.TestTTFSourceFontFileNameEqualsFamilyStyle.test_source_ttf_font_filename_equals_familystyle(): ERROR
+bakery_lint.tests.upstream.test_contour_count.TestContourCount.test_contour_count(): ERROR
+bakery_lint.tests.upstream.test_check_ufo_requirements.UfoOpenTest.test_has_rupee(): ERROR
+bakery_lint.tests.upstream.test_check_ufo_requirements.UfoOpenTest.test_is_A(): ERROR
+bakery_lint.tests.upstream.test_check_ufo_requirements.UfoOpenTest.test_is_A_a_glyph_instance(): ERROR
+bakery_lint.tests.upstream.test_check_ufo_requirements.UfoOpenTest.test_is_ended_ufo(): ERROR
+bakery_lint.tests.upstream.test_check_ufo_requirements.UfoOpenTest.test_is_folder(): ERROR
+bakery_lint.tests.upstream.test_check_ufo_requirements.UfoOpenTest.test_is_fsType_eq_1(): ERROR
+bakery_lint.tests.upstream.test_check_ufo_requirements.UfoOpenTest.test_it_exists(): ERROR
+bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations.TestUFOFontFamilyNamingTest.test_familyname_less_than_32_chars(): OK
+bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations.TestUFOFontFamilyNamingTest.test_fullfontname_less_than_64_chars(): OK
+bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations.TestUFOFontFamilyNamingTest.test_postscriptname_consistof_allowed_chars(): OK
+bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations.TestUFOFontFamilyNamingTest.test_postscriptname_less_than_30_chars(): OK
+bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations.TestUFOFontFamilyNamingTest.test_stylename_less_than_32_chars(): OK
+bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations.TestUFOFontFamilyNamingTest.test_weight_value_range_between_250_and_900(): OK
+$ fontbakery-check.py upstream Coustard-Heavy.sfd
+bakery_lint.tests.upstream.test_unicode_value_should_appear_only_once_per_font.UnicodeValueShouldAppearOnlyOnce.testUnicodeValue(): ERROR
+bakery_lint.tests.upstream.test_font_filename_eq_familystyle.TestTTFSourceFontFileNameEqualsFamilyStyle.test_source_ttf_font_filename_equals_familystyle(): ERROR
+bakery_lint.tests.upstream.test_contour_count.TestContourCount.test_contour_count(): ERROR
+bakery_lint.tests.upstream.test_check_ufo_requirements.UfoOpenTest.test_has_rupee(): ERROR
+bakery_lint.tests.upstream.test_check_ufo_requirements.UfoOpenTest.test_is_A(): ERROR
+bakery_lint.tests.upstream.test_check_ufo_requirements.UfoOpenTest.test_is_A_a_glyph_instance(): ERROR
+bakery_lint.tests.upstream.test_check_ufo_requirements.UfoOpenTest.test_is_ended_ufo(): ERROR
+bakery_lint.tests.upstream.test_check_ufo_requirements.UfoOpenTest.test_is_folder(): ERROR
+bakery_lint.tests.upstream.test_check_ufo_requirements.UfoOpenTest.test_is_fsType_eq_1(): ERROR
+bakery_lint.tests.upstream.test_check_ufo_requirements.UfoOpenTest.test_it_exists(): ERROR
+bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations.TestUFOFontFamilyNamingTest.test_familyname_less_than_32_chars(): OK
+bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations.TestUFOFontFamilyNamingTest.test_fullfontname_less_than_64_chars(): OK
+bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations.TestUFOFontFamilyNamingTest.test_postscriptname_consistof_allowed_chars(): OK
+bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations.TestUFOFontFamilyNamingTest.test_postscriptname_less_than_30_chars(): OK
+bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations.TestUFOFontFamilyNamingTest.test_stylename_less_than_32_chars(): OK
+bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations.TestUFOFontFamilyNamingTest.test_weight_value_range_between_250_and_900(): OK
+$ fontbakery-check.py upstream Coustard-Regular-TTF.sfd
+bakery_lint.tests.upstream.test_unicode_value_should_appear_only_once_per_font.UnicodeValueShouldAppearOnlyOnce.testUnicodeValue(): ERROR
+bakery_lint.tests.upstream.test_font_filename_eq_familystyle.TestTTFSourceFontFileNameEqualsFamilyStyle.test_source_ttf_font_filename_equals_familystyle(): ERROR
+bakery_lint.tests.upstream.test_contour_count.TestContourCount.test_contour_count(): ERROR
+bakery_lint.tests.upstream.test_check_ufo_requirements.UfoOpenTest.test_has_rupee(): ERROR
+bakery_lint.tests.upstream.test_check_ufo_requirements.UfoOpenTest.test_is_A(): ERROR
+bakery_lint.tests.upstream.test_check_ufo_requirements.UfoOpenTest.test_is_A_a_glyph_instance(): ERROR
+bakery_lint.tests.upstream.test_check_ufo_requirements.UfoOpenTest.test_is_ended_ufo(): ERROR
+bakery_lint.tests.upstream.test_check_ufo_requirements.UfoOpenTest.test_is_folder(): ERROR
+bakery_lint.tests.upstream.test_check_ufo_requirements.UfoOpenTest.test_is_fsType_eq_1(): ERROR
+bakery_lint.tests.upstream.test_check_ufo_requirements.UfoOpenTest.test_it_exists(): ERROR
+bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations.TestUFOFontFamilyNamingTest.test_familyname_less_than_32_chars(): OK
+bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations.TestUFOFontFamilyNamingTest.test_fullfontname_less_than_64_chars(): OK
+bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations.TestUFOFontFamilyNamingTest.test_postscriptname_consistof_allowed_chars(): OK
+bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations.TestUFOFontFamilyNamingTest.test_postscriptname_less_than_30_chars(): OK
+bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations.TestUFOFontFamilyNamingTest.test_stylename_less_than_32_chars(): OK
+bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations.TestUFOFontFamilyNamingTest.test_weight_value_range_between_250_and_900(): OK
+$ fontbakery-check.py upstream Coustard-Regular.sfd
+bakery_lint.tests.upstream.test_unicode_value_should_appear_only_once_per_font.UnicodeValueShouldAppearOnlyOnce.testUnicodeValue(): ERROR
+bakery_lint.tests.upstream.test_font_filename_eq_familystyle.TestTTFSourceFontFileNameEqualsFamilyStyle.test_source_ttf_font_filename_equals_familystyle(): ERROR
+bakery_lint.tests.upstream.test_contour_count.TestContourCount.test_contour_count(): ERROR
+bakery_lint.tests.upstream.test_check_ufo_requirements.UfoOpenTest.test_has_rupee(): ERROR
+bakery_lint.tests.upstream.test_check_ufo_requirements.UfoOpenTest.test_is_A(): ERROR
+bakery_lint.tests.upstream.test_check_ufo_requirements.UfoOpenTest.test_is_A_a_glyph_instance(): ERROR
+bakery_lint.tests.upstream.test_check_ufo_requirements.UfoOpenTest.test_is_ended_ufo(): ERROR
+bakery_lint.tests.upstream.test_check_ufo_requirements.UfoOpenTest.test_is_folder(): ERROR
+bakery_lint.tests.upstream.test_check_ufo_requirements.UfoOpenTest.test_is_fsType_eq_1(): ERROR
+bakery_lint.tests.upstream.test_check_ufo_requirements.UfoOpenTest.test_it_exists(): ERROR
+bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations.TestUFOFontFamilyNamingTest.test_familyname_less_than_32_chars(): OK
+bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations.TestUFOFontFamilyNamingTest.test_fullfontname_less_than_64_chars(): OK
+bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations.TestUFOFontFamilyNamingTest.test_postscriptname_consistof_allowed_chars(): OK
+bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations.TestUFOFontFamilyNamingTest.test_postscriptname_less_than_30_chars(): OK
+bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations.TestUFOFontFamilyNamingTest.test_stylename_less_than_32_chars(): OK
+bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations.TestUFOFontFamilyNamingTest.test_weight_value_range_between_250_and_900(): OK
+### (4 of 6) Convert sources to TTF
+$ ttx -d /home/travis/build/fontdirectory/coustard/builds/build /home/travis/build/fontdirectory/coustard/builds/build/sources/Coustard-Regular.ttx /home/travis/build/fontdirectory/coustard/builds/build/sources/Coustard-Bold.ttx
+strippedname:/home/travis/build/fontdirectory/coustard/builds/build/sources/Coustard-Black-TTF.sfd
+strippedname:/home/travis/build/fontdirectory/coustard/builds/build/sources/Coustard-Heavy.sfd
+strippedname:/home/travis/build/fontdirectory/coustard/builds/build/sources/Coustard-Regular-TTF.sfd
+strippedname:/home/travis/build/fontdirectory/coustard/builds/build/sources/Coustard-Regular.sfd
+Compiling "/home/travis/build/fontdirectory/coustard/builds/build/sources/Coustard-Regular.ttx" to "/home/travis/build/fontdirectory/coustard/builds/build/Coustard-Regular.ttf"...
+Parsing 'GlyphOrder' table...
+Parsing 'head' table...
+Parsing 'hhea' table...
+Parsing 'maxp' table...
+Parsing 'OS/2' table...
+Parsing 'hmtx' table...
+Parsing 'cmap' table...
+Parsing 'fpgm' table...
+Parsing 'prep' table...
+Parsing 'cvt ' table...
+Parsing 'loca' table...
+Parsing 'glyf' table...
+Parsing 'name' table...
+Parsing 'post' table...
+Parsing 'gasp' table...
+Parsing 'FFTM' table...
+Parsing 'GDEF' table...
+Parsing 'GPOS' table...
+Parsing 'GSUB' table...
+Compiling "/home/travis/build/fontdirectory/coustard/builds/build/sources/Coustard-Bold.ttx" to "/home/travis/build/fontdirectory/coustard/builds/build/Coustard-Bold.ttf"...
+Parsing 'GlyphOrder' table...
+Parsing 'head' table...
+Parsing 'hhea' table...
+Parsing 'maxp' table...
+Parsing 'OS/2' table...
+Parsing 'hmtx' table...
+Parsing 'cmap' table...
+Parsing 'fpgm' table...
+Parsing 'prep' table...
+Parsing 'cvt ' table...
+Parsing 'loca' table...
+Parsing 'glyf' table...
+Parsing 'name' table...
+Parsing 'post' table...
+Parsing 'gasp' table...
+Parsing 'FFTM' table...
+Parsing 'GDEF' table...
+Parsing 'GPOS' table...
+Parsing 'GSUB' table...
+### Test Coustard-Regular.ttf
+$ fontbakery-check.py result Coustard-Regular.ttf
+bakery_lint.tests.downstream.test_names_are_ascii_only.CheckNamesAreASCIIOnly.test_check_names_are_ascii_only(): OK
+bakery_lint.tests.downstream.test_gpos_table_has_kerning_info.CheckGposTableHasKerningInfo.test_gpos_table_has_kerning_info(): ERROR
+bakery_lint.tests.downstream.test_gasp_table_value.CheckGaspTableType.test_check_gasp_table_type(): OK
+$ fontbakery-fix-gasp.py --set=15 /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Regular.ttf
+$ mv /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Regular.ttf.fix /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Regular.ttf
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_allowed_numbers_paths_in_composite_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_allowed_numbers_paths_in_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_allowed_numbers_points_in_composite_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_allowed_numbers_points_in_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_duplicate_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_duplicate_unicode_codepoints(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_flipped_reference_in_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_missing_anchors(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_missing_extrema_in_glyphs(): FAIL
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_overlapped_hints(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_points_are_integer_aligned(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_points_are_not_too_far_apart(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_postscript_hasnt_limit_hints_in_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_postscript_hasnt_limit_points_in_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_referenced_glyphs_are_present(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_valid_glyph_names(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_valid_length_instructions(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_validation_glyph_intersect(): FAIL
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_validation_open_contours(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_wrong_direction_in_glyphs(): FAIL
+bakery_lint.tests.downstream.test_check_vertical_metrics.CheckVerticalLinegapMetrics.test_metrics_linegaps_are_zero(): OK
+bakery_lint.tests.downstream.test_check_vertical_metrics.CheckVerticalAscentMetrics.test_metrics_ascents_equal_bbox(): OK
+bakery_lint.tests.downstream.test_check_vertical_metrics.CheckVerticalDescentMetrics.test_metrics_descents_equal_bbox(): OK
+bakery_lint.tests.downstream.test_check_upm_heights_less_120.TestCheckUPMHeightsLess120.test_check_upm_heigths_less_120(): FAIL
+bakery_lint.tests.downstream.test_check_unused_glyph_data.CheckUnusedGlyphData.test_check_unused_glyph_data(): ERROR
+bakery_lint.tests.downstream.test_check_unencoded_glyph.TestFontUnencodedGlyph.test_font_unencoded_glyphs(): FAIL
+$ fontbakery-fix-glyph-private-encoding.py --autofix /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Regular.ttf
+$ mv /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Regular.ttf.fix /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Regular.ttf
+bakery_lint.tests.downstream.test_check_unencoded_glyph.TestFontUnencodedGlyph.test_font_unencoded_glyphs(): FAIL
+bakery_lint.tests.downstream.test_check_panose_identification.CheckPanoseIdentification.test_check_panose_identification(): OK
+bakery_lint.tests.downstream.test_check_os2_width_class.CheckOS2WidthClass.test_check_os2_width_class(): OK
+bakery_lint.tests.downstream.test_check_no_problematic_formats.CheckNoProblematicFormats.test_check_no_problematic_formats(): OK
+bakery_lint.tests.downstream.test_check_nbsp_width_matches_sp_width.CheckNbspWidthMatchesSpWidth.test_check_nbsp_width_matches_sp_width(): FAIL
+$ fontbakery-fix-nbsp.py /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Regular.ttf
+$ mv /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Regular.ttf.fix /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Regular.ttf
+bakery_lint.tests.downstream.test_check_nbsp_width_matches_sp_width.CheckNbspWidthMatchesSpWidth.test_check_nbsp_width_matches_sp_width(): OK
+bakery_lint.tests.downstream.test_check_names_same_across_platforms.CheckNamesSameAcrossPlatforms.test_check_names_same_across_platforms(): OK
+bakery_lint.tests.downstream.test_check_name_table_recommendation.CheckStyleNameRecommendation.test_check_stylename_is_under_recommendations(): OK
+bakery_lint.tests.downstream.test_check_name_table_recommendation.CheckOTFamilyNameRecommendation.test_check_opentype_familyname(): FAIL
+$ fontbakery-fix-opentype-names.py /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Regular.ttf
+$ mv /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Regular.ttf.fix /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Regular.ttf
+bakery_lint.tests.downstream.test_check_name_table_recommendation.CheckOTFamilyNameRecommendation.test_check_opentype_familyname(): OK
+bakery_lint.tests.downstream.test_check_name_table_recommendation.CheckOTStyleNameRecommendation.test_check_opentype_stylename(): OK
+bakery_lint.tests.downstream.test_check_name_table_recommendation.CheckOTFullNameRecommendation.test_check_opentype_fullname(): OK
+bakery_lint.tests.downstream.test_check_magic_prep_code.CheckMagicPREPByteCode.test_prep_magic_code(): FAIL
+bakery_lint.tests.downstream.test_check_license_included.CheckLicenseIncluded.test_license_included_in_font_names(): OK
+bakery_lint.tests.downstream.test_check_italic_angle_agreement.CheckItalicAngleAgreement.test_check_italic_angle_agreement(): OK
+bakery_lint.tests.downstream.test_check_hmtx_hhea_max_advance_width_agreement.CheckHmtxHheaMaxAdvanceWidthAgreement.test_check_hmtx_hhea_max_advance_width_agreement(): OK
+bakery_lint.tests.downstream.test_check_glyph_existence.CheckGlyphExistence.test_euro(): OK
+bakery_lint.tests.downstream.test_check_glyph_existence.CheckGlyphExistence.test_nbsp(): OK
+bakery_lint.tests.downstream.test_check_glyph_existence.CheckGlyphExistence.test_space(): OK
+bakery_lint.tests.downstream.test_check_glyf_table_length.CheckGlyfTableLength.test_check_glyf_table_length(): FAIL
+bakery_lint.tests.downstream.test_check_full_font_name_begins_with_family_name.CheckFullFontNameBeginsWithFamilyName.test_check_full_font_name_begins_with_family_name(): OK
+bakery_lint.tests.downstream.test_check_fontname_matches_macstyle.CheckFontNameEqualToMacStyleFlags.test_fontname_is_equal_to_macstyle(): FAIL
+bakery_lint.tests.downstream.test_check_font_tables.CheckFontHasDsigTable.test_check_font_has_dsig_table(): FAIL
+$ fontbakery-fix-dsig.py /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Regular.ttf
+$ mv /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Regular.ttf.fix /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Regular.ttf
+bakery_lint.tests.downstream.test_check_font_tables.CheckFontHasDsigTable.test_check_font_has_dsig_table(): OK
+bakery_lint.tests.downstream.test_check_font_tables.CheckFontHasNotKernTable.test_no_kern_table_exists(): OK
+bakery_lint.tests.downstream.test_check_font_agreements.CheckFsTypeIsNotSet.test_is_fstype_not_set(): OK
+$ fontbakery-fix-fstype.py --autofix /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Regular.ttf
+$ mv /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Regular.ttf.fix /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Regular.ttf
+bakery_lint.tests.downstream.test_check_font_agreements.CheckFontAgreements.test_em_is_1000(): FAIL
+bakery_lint.tests.downstream.test_check_font_agreements.CheckFontAgreements.test_font_is_font(): OK
+bakery_lint.tests.downstream.test_check_font_agreements.CheckFontAgreements.test_latin_file_exists(): FAIL
+bakery_lint.tests.downstream.test_check_font_agreements.CheckFontAgreements.test_menu_file_exists(): FAIL
+### Optimize TTF Coustard-Regular.ttf
+$ ls -l 'Coustard-Regular.ttf'* # look at the size savings of that subset process
+Coustard-Regular.ttf.opt: 80416 bytes
+Coustard-Regular.ttf: 81636 bytes
+$ mv /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Regular.ttf.opt /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Regular.ttf
+### Autohint TTFs (ttfautohint) Coustard-Regular.ttf
+$ ttfautohint -l 7 -r 28 -G 50 -x 13 -w "G" /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Regular.ttf '/home/travis/build/fontdirectory/coustard/builds/build/Coustard-Regular.autohint.ttf'
+
+$ ls -l /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Regular.*ttf # look at the size savings of that subset process
+/home/travis/build/fontdirectory/coustard/builds/build/Coustard-Regular.ttf: 80416 bytes
+/home/travis/build/fontdirectory/coustard/builds/build/Coustard-Regular.autohint.ttf: 62672 bytes
+$ mv /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Regular.autohint.ttf /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Regular.ttf
+### Subset TTFs (pyftsubset) Coustard-Regular.ttf
+$ pyftsubset Coustard-Regular.latin
+$ pyftsubset Coustard-Regular.menu
+strippedname:/home/travis/build/fontdirectory/coustard/builds/build/Coustard-Regular.ttf
+spaceWidth is    500
+nbspWidth is     86
+Coustard-Regular.ttf.fix made with spaceWidth and nbspWidth of 500
+### Test Coustard-Bold.ttf
+$ fontbakery-check.py result Coustard-Bold.ttf
+bakery_lint.tests.downstream.test_names_are_ascii_only.CheckNamesAreASCIIOnly.test_check_names_are_ascii_only(): OK
+bakery_lint.tests.downstream.test_gpos_table_has_kerning_info.CheckGposTableHasKerningInfo.test_gpos_table_has_kerning_info(): ERROR
+bakery_lint.tests.downstream.test_gasp_table_value.CheckGaspTableType.test_check_gasp_table_type(): OK
+$ fontbakery-fix-gasp.py --set=15 /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Bold.ttf
+$ mv /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Bold.ttf.fix /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Bold.ttf
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_allowed_numbers_paths_in_composite_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_allowed_numbers_paths_in_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_allowed_numbers_points_in_composite_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_allowed_numbers_points_in_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_duplicate_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_duplicate_unicode_codepoints(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_flipped_reference_in_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_missing_anchors(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_missing_extrema_in_glyphs(): FAIL
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_overlapped_hints(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_points_are_integer_aligned(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_points_are_not_too_far_apart(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_postscript_hasnt_limit_hints_in_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_postscript_hasnt_limit_points_in_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_referenced_glyphs_are_present(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_valid_glyph_names(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_valid_length_instructions(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_validation_glyph_intersect(): FAIL
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_validation_open_contours(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_wrong_direction_in_glyphs(): FAIL
+bakery_lint.tests.downstream.test_check_vertical_metrics.CheckVerticalLinegapMetrics.test_metrics_linegaps_are_zero(): OK
+bakery_lint.tests.downstream.test_check_vertical_metrics.CheckVerticalAscentMetrics.test_metrics_ascents_equal_bbox(): OK
+bakery_lint.tests.downstream.test_check_vertical_metrics.CheckVerticalDescentMetrics.test_metrics_descents_equal_bbox(): OK
+bakery_lint.tests.downstream.test_check_upm_heights_less_120.TestCheckUPMHeightsLess120.test_check_upm_heigths_less_120(): FAIL
+bakery_lint.tests.downstream.test_check_unused_glyph_data.CheckUnusedGlyphData.test_check_unused_glyph_data(): ERROR
+bakery_lint.tests.downstream.test_check_unencoded_glyph.TestFontUnencodedGlyph.test_font_unencoded_glyphs(): FAIL
+$ fontbakery-fix-glyph-private-encoding.py --autofix /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Bold.ttf
+$ mv /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Bold.ttf.fix /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Bold.ttf
+bakery_lint.tests.downstream.test_check_unencoded_glyph.TestFontUnencodedGlyph.test_font_unencoded_glyphs(): FAIL
+bakery_lint.tests.downstream.test_check_panose_identification.CheckPanoseIdentification.test_check_panose_identification(): OK
+bakery_lint.tests.downstream.test_check_os2_width_class.CheckOS2WidthClass.test_check_os2_width_class(): OK
+bakery_lint.tests.downstream.test_check_no_problematic_formats.CheckNoProblematicFormats.test_check_no_problematic_formats(): OK
+bakery_lint.tests.downstream.test_check_nbsp_width_matches_sp_width.CheckNbspWidthMatchesSpWidth.test_check_nbsp_width_matches_sp_width(): FAIL
+$ fontbakery-fix-nbsp.py /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Bold.ttf
+$ mv /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Bold.ttf.fix /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Bold.ttf
+bakery_lint.tests.downstream.test_check_nbsp_width_matches_sp_width.CheckNbspWidthMatchesSpWidth.test_check_nbsp_width_matches_sp_width(): OK
+bakery_lint.tests.downstream.test_check_names_same_across_platforms.CheckNamesSameAcrossPlatforms.test_check_names_same_across_platforms(): OK
+bakery_lint.tests.downstream.test_check_name_table_recommendation.CheckStyleNameRecommendation.test_check_stylename_is_under_recommendations(): OK
+bakery_lint.tests.downstream.test_check_name_table_recommendation.CheckOTFamilyNameRecommendation.test_check_opentype_familyname(): FAIL
+$ fontbakery-fix-opentype-names.py /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Bold.ttf
+$ mv /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Bold.ttf.fix /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Bold.ttf
+bakery_lint.tests.downstream.test_check_name_table_recommendation.CheckOTFamilyNameRecommendation.test_check_opentype_familyname(): OK
+bakery_lint.tests.downstream.test_check_name_table_recommendation.CheckOTStyleNameRecommendation.test_check_opentype_stylename(): OK
+bakery_lint.tests.downstream.test_check_name_table_recommendation.CheckOTFullNameRecommendation.test_check_opentype_fullname(): OK
+bakery_lint.tests.downstream.test_check_magic_prep_code.CheckMagicPREPByteCode.test_prep_magic_code(): FAIL
+bakery_lint.tests.downstream.test_check_license_included.CheckLicenseIncluded.test_license_included_in_font_names(): OK
+bakery_lint.tests.downstream.test_check_italic_angle_agreement.CheckItalicAngleAgreement.test_check_italic_angle_agreement(): OK
+bakery_lint.tests.downstream.test_check_hmtx_hhea_max_advance_width_agreement.CheckHmtxHheaMaxAdvanceWidthAgreement.test_check_hmtx_hhea_max_advance_width_agreement(): OK
+bakery_lint.tests.downstream.test_check_glyph_existence.CheckGlyphExistence.test_euro(): OK
+bakery_lint.tests.downstream.test_check_glyph_existence.CheckGlyphExistence.test_nbsp(): OK
+bakery_lint.tests.downstream.test_check_glyph_existence.CheckGlyphExistence.test_space(): OK
+bakery_lint.tests.downstream.test_check_glyf_table_length.CheckGlyfTableLength.test_check_glyf_table_length(): FAIL
+bakery_lint.tests.downstream.test_check_full_font_name_begins_with_family_name.CheckFullFontNameBeginsWithFamilyName.test_check_full_font_name_begins_with_family_name(): OK
+bakery_lint.tests.downstream.test_check_fontname_matches_macstyle.CheckFontNameEqualToMacStyleFlags.test_fontname_is_equal_to_macstyle(): FAIL
+bakery_lint.tests.downstream.test_check_font_tables.CheckFontHasDsigTable.test_check_font_has_dsig_table(): FAIL
+$ fontbakery-fix-dsig.py /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Bold.ttf
+$ mv /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Bold.ttf.fix /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Bold.ttf
+bakery_lint.tests.downstream.test_check_font_tables.CheckFontHasDsigTable.test_check_font_has_dsig_table(): OK
+bakery_lint.tests.downstream.test_check_font_tables.CheckFontHasNotKernTable.test_no_kern_table_exists(): OK
+bakery_lint.tests.downstream.test_check_font_agreements.CheckFsTypeIsNotSet.test_is_fstype_not_set(): OK
+$ fontbakery-fix-fstype.py --autofix /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Bold.ttf
+$ mv /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Bold.ttf.fix /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Bold.ttf
+bakery_lint.tests.downstream.test_check_font_agreements.CheckFontAgreements.test_em_is_1000(): FAIL
+bakery_lint.tests.downstream.test_check_font_agreements.CheckFontAgreements.test_font_is_font(): OK
+bakery_lint.tests.downstream.test_check_font_agreements.CheckFontAgreements.test_latin_file_exists(): FAIL
+bakery_lint.tests.downstream.test_check_font_agreements.CheckFontAgreements.test_menu_file_exists(): FAIL
+### Optimize TTF Coustard-Bold.ttf
+$ ls -l 'Coustard-Bold.ttf'* # look at the size savings of that subset process
+Coustard-Bold.ttf.opt: 81552 bytes
+Coustard-Bold.ttf: 82784 bytes
+$ mv /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Bold.ttf.opt /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Bold.ttf
+### Autohint TTFs (ttfautohint) Coustard-Bold.ttf
+$ ttfautohint -l 7 -r 28 -G 50 -x 13 -w "G" /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Bold.ttf '/home/travis/build/fontdirectory/coustard/builds/build/Coustard-Bold.autohint.ttf'
+
+$ ls -l /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Bold.*ttf # look at the size savings of that subset process
+/home/travis/build/fontdirectory/coustard/builds/build/Coustard-Bold.ttf: 81552 bytes
+/home/travis/build/fontdirectory/coustard/builds/build/Coustard-Bold.autohint.ttf: 60436 bytes
+$ mv /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Bold.autohint.ttf /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Bold.ttf
+### Subset TTFs (pyftsubset) Coustard-Bold.ttf
+$ pyftsubset Coustard-Bold.latin
+$ pyftsubset Coustard-Bold.menu
+strippedname:/home/travis/build/fontdirectory/coustard/builds/build/Coustard-Bold.ttf
+spaceWidth is    442
+nbspWidth is     250
+Coustard-Bold.ttf.fix made with spaceWidth and nbspWidth of 442
+$ fontbakery-build-font2ttf.py sources/Coustard-Black-TTF.sfd Coustard-Black-TTF.ttf
+Success: Generated OpenType-TTF (/home/travis/build/fontdirectory/coustard/builds/build/Coustard-Black-TTF.ttf)
+### Test Coustard-Black-TTF.ttf
+$ fontbakery-check.py result Coustard-Black-TTF.ttf
+bakery_lint.tests.downstream.test_names_are_ascii_only.CheckNamesAreASCIIOnly.test_check_names_are_ascii_only(): OK
+bakery_lint.tests.downstream.test_gpos_table_has_kerning_info.CheckGposTableHasKerningInfo.test_gpos_table_has_kerning_info(): ERROR
+bakery_lint.tests.downstream.test_gasp_table_value.CheckGaspTableType.test_check_gasp_table_type(): OK
+$ fontbakery-fix-gasp.py --set=15 /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Black-TTF.ttf
+$ mv /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Black-TTF.ttf.fix /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Black-TTF.ttf
+The following table(s) in the font have been ignored by FontForge
+  Ignoring 'DSIG' digital signature table
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_allowed_numbers_paths_in_composite_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_allowed_numbers_paths_in_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_allowed_numbers_points_in_composite_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_allowed_numbers_points_in_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_duplicate_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_duplicate_unicode_codepoints(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_flipped_reference_in_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_missing_anchors(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_missing_extrema_in_glyphs(): FAIL
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_overlapped_hints(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_points_are_integer_aligned(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_points_are_not_too_far_apart(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_postscript_hasnt_limit_hints_in_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_postscript_hasnt_limit_points_in_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_referenced_glyphs_are_present(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_valid_glyph_names(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_valid_length_instructions(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_validation_glyph_intersect(): FAIL
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_validation_open_contours(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_wrong_direction_in_glyphs(): OK
+bakery_lint.tests.downstream.test_check_vertical_metrics.CheckVerticalLinegapMetrics.test_metrics_linegaps_are_zero(): OK
+bakery_lint.tests.downstream.test_check_vertical_metrics.CheckVerticalAscentMetrics.test_metrics_ascents_equal_bbox(): OK
+bakery_lint.tests.downstream.test_check_vertical_metrics.CheckVerticalDescentMetrics.test_metrics_descents_equal_bbox(): OK
+bakery_lint.tests.downstream.test_check_upm_heights_less_120.TestCheckUPMHeightsLess120.test_check_upm_heigths_less_120(): FAIL
+bakery_lint.tests.downstream.test_check_unused_glyph_data.CheckUnusedGlyphData.test_check_unused_glyph_data(): ERROR
+bakery_lint.tests.downstream.test_check_unencoded_glyph.TestFontUnencodedGlyph.test_font_unencoded_glyphs(): FAIL
+$ fontbakery-fix-glyph-private-encoding.py --autofix /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Black-TTF.ttf
+$ mv /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Black-TTF.ttf.fix /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Black-TTF.ttf
+bakery_lint.tests.downstream.test_check_unencoded_glyph.TestFontUnencodedGlyph.test_font_unencoded_glyphs(): FAIL
+bakery_lint.tests.downstream.test_check_panose_identification.CheckPanoseIdentification.test_check_panose_identification(): OK
+bakery_lint.tests.downstream.test_check_os2_width_class.CheckOS2WidthClass.test_check_os2_width_class(): OK
+bakery_lint.tests.downstream.test_check_no_problematic_formats.CheckNoProblematicFormats.test_check_no_problematic_formats(): OK
+bakery_lint.tests.downstream.test_check_nbsp_width_matches_sp_width.CheckNbspWidthMatchesSpWidth.test_check_nbsp_width_matches_sp_width(): FAIL
+$ fontbakery-fix-nbsp.py /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Black-TTF.ttf
+$ mv /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Black-TTF.ttf.fix /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Black-TTF.ttf
+bakery_lint.tests.downstream.test_check_nbsp_width_matches_sp_width.CheckNbspWidthMatchesSpWidth.test_check_nbsp_width_matches_sp_width(): OK
+bakery_lint.tests.downstream.test_check_names_same_across_platforms.CheckNamesSameAcrossPlatforms.test_check_names_same_across_platforms(): OK
+bakery_lint.tests.downstream.test_check_name_table_recommendation.CheckStyleNameRecommendation.test_check_stylename_is_under_recommendations(): OK
+bakery_lint.tests.downstream.test_check_name_table_recommendation.CheckOTFamilyNameRecommendation.test_check_opentype_familyname(): FAIL
+$ fontbakery-fix-opentype-names.py /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Black-TTF.ttf
+$ mv /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Black-TTF.ttf.fix /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Black-TTF.ttf
+bakery_lint.tests.downstream.test_check_name_table_recommendation.CheckOTFamilyNameRecommendation.test_check_opentype_familyname(): OK
+bakery_lint.tests.downstream.test_check_name_table_recommendation.CheckOTStyleNameRecommendation.test_check_opentype_stylename(): OK
+bakery_lint.tests.downstream.test_check_name_table_recommendation.CheckOTFullNameRecommendation.test_check_opentype_fullname(): OK
+bakery_lint.tests.downstream.test_check_magic_prep_code.CheckMagicPREPByteCode.test_prep_magic_code(): FAIL
+bakery_lint.tests.downstream.test_check_license_included.CheckLicenseIncluded.test_license_included_in_font_names(): OK
+bakery_lint.tests.downstream.test_check_italic_angle_agreement.CheckItalicAngleAgreement.test_check_italic_angle_agreement(): OK
+bakery_lint.tests.downstream.test_check_hmtx_hhea_max_advance_width_agreement.CheckHmtxHheaMaxAdvanceWidthAgreement.test_check_hmtx_hhea_max_advance_width_agreement(): OK
+bakery_lint.tests.downstream.test_check_glyph_existence.CheckGlyphExistence.test_euro(): OK
+bakery_lint.tests.downstream.test_check_glyph_existence.CheckGlyphExistence.test_nbsp(): OK
+bakery_lint.tests.downstream.test_check_glyph_existence.CheckGlyphExistence.test_space(): OK
+bakery_lint.tests.downstream.test_check_glyf_table_length.CheckGlyfTableLength.test_check_glyf_table_length(): FAIL
+bakery_lint.tests.downstream.test_check_full_font_name_begins_with_family_name.CheckFullFontNameBeginsWithFamilyName.test_check_full_font_name_begins_with_family_name(): OK
+bakery_lint.tests.downstream.test_check_fontname_matches_macstyle.CheckFontNameEqualToMacStyleFlags.test_fontname_is_equal_to_macstyle(): FAIL
+bakery_lint.tests.downstream.test_check_font_tables.CheckFontHasDsigTable.test_check_font_has_dsig_table(): OK
+bakery_lint.tests.downstream.test_check_font_tables.CheckFontHasNotKernTable.test_no_kern_table_exists(): OK
+bakery_lint.tests.downstream.test_check_font_agreements.CheckFsTypeIsNotSet.test_is_fstype_not_set(): OK
+$ fontbakery-fix-fstype.py --autofix /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Black-TTF.ttf
+$ mv /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Black-TTF.ttf.fix /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Black-TTF.ttf
+bakery_lint.tests.downstream.test_check_font_agreements.CheckFontAgreements.test_em_is_1000(): FAIL
+bakery_lint.tests.downstream.test_check_font_agreements.CheckFontAgreements.test_font_is_font(): OK
+bakery_lint.tests.downstream.test_check_font_agreements.CheckFontAgreements.test_latin_file_exists(): FAIL
+bakery_lint.tests.downstream.test_check_font_agreements.CheckFontAgreements.test_menu_file_exists(): FAIL
+### Optimize TTF Coustard-Black-TTF.ttf
+$ ls -l 'Coustard-Black-TTF.ttf'* # look at the size savings of that subset process
+Coustard-Black-TTF.ttf.opt: 41924 bytes
+Coustard-Black-TTF.ttf: 44836 bytes
+$ mv /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Black-TTF.ttf.opt /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Black-TTF.ttf
+### Autohint TTFs (ttfautohint) Coustard-Black-TTF.ttf
+$ ttfautohint -l 7 -r 28 -G 50 -x 13 -w "G" /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Black-TTF.ttf '/home/travis/build/fontdirectory/coustard/builds/build/Coustard-Black-TTF.autohint.ttf'
+
+$ ls -l /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Black-TTF.*ttf # look at the size savings of that subset process
+/home/travis/build/fontdirectory/coustard/builds/build/Coustard-Black-TTF.ttf: 41924 bytes
+/home/travis/build/fontdirectory/coustard/builds/build/Coustard-Black-TTF.autohint.ttf: 57696 bytes
+$ mv /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Black-TTF.autohint.ttf /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Black-TTF.ttf
+### Subset TTFs (pyftsubset) Coustard-Black-TTF.ttf
+$ pyftsubset Coustard-Black-TTF.latin
+$ pyftsubset Coustard-Black-TTF.menu
+strippedname:/home/travis/build/fontdirectory/coustard/builds/build/Coustard-Black-TTF.ttf
+spaceWidth is    442
+nbspWidth is     250
+Coustard-Black-TTF.ttf.fix made with spaceWidth and nbspWidth of 442
+$ fontbakery-build-font2ttf.py sources/Coustard-Heavy.sfd Coustard-Heavy.ttf
+Success: Generated OpenType-TTF (/home/travis/build/fontdirectory/coustard/builds/build/Coustard-Heavy.ttf)
+### Test Coustard-Heavy.ttf
+$ fontbakery-check.py result Coustard-Heavy.ttf
+bakery_lint.tests.downstream.test_names_are_ascii_only.CheckNamesAreASCIIOnly.test_check_names_are_ascii_only(): OK
+bakery_lint.tests.downstream.test_gpos_table_has_kerning_info.CheckGposTableHasKerningInfo.test_gpos_table_has_kerning_info(): ERROR
+bakery_lint.tests.downstream.test_gasp_table_value.CheckGaspTableType.test_check_gasp_table_type(): FAIL
+$ fontbakery-fix-gasp.py --set=15 /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Heavy.ttf
+$ mv /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Heavy.ttf.fix /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Heavy.ttf
+bakery_lint.tests.downstream.test_gasp_table_value.CheckGaspTableType.test_check_gasp_table_type(): OK
+$ fontbakery-fix-gasp.py --set=15 /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Heavy.ttf
+$ mv /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Heavy.ttf.fix /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Heavy.ttf
+The following table(s) in the font have been ignored by FontForge
+  Ignoring 'DSIG' digital signature table
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_allowed_numbers_paths_in_composite_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_allowed_numbers_paths_in_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_allowed_numbers_points_in_composite_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_allowed_numbers_points_in_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_duplicate_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_duplicate_unicode_codepoints(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_flipped_reference_in_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_missing_anchors(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_missing_extrema_in_glyphs(): FAIL
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_overlapped_hints(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_points_are_integer_aligned(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_points_are_not_too_far_apart(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_postscript_hasnt_limit_hints_in_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_postscript_hasnt_limit_points_in_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_referenced_glyphs_are_present(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_valid_glyph_names(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_valid_length_instructions(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_validation_glyph_intersect(): FAIL
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_validation_open_contours(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_wrong_direction_in_glyphs(): OK
+bakery_lint.tests.downstream.test_check_vertical_metrics.CheckVerticalLinegapMetrics.test_metrics_linegaps_are_zero(): OK
+bakery_lint.tests.downstream.test_check_vertical_metrics.CheckVerticalAscentMetrics.test_metrics_ascents_equal_bbox(): FAIL
+$ fontbakery-fix-vertical-metrics.py --autofix /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Heavy.ttf /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Black-TTF.ttf /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Bold.ttf /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Regular.ttf
+$ mv /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Heavy.ttf.fix /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Heavy.ttf
+$ mv /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Black-TTF.ttf.fix /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Black-TTF.ttf
+$ mv /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Bold.ttf.fix /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Bold.ttf
+$ mv /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Regular.ttf.fix /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Regular.ttf
+$ fontbakery-fix-vertical-metrics.py /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Heavy.ttf /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Black-TTF.ttf /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Bold.ttf /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Regular.ttf
+Parameter              Coustard-Heavy.ttf    Coustard-Black-TTF.ttf    Coustard-Bold.ttf    Coustard-Regular.ttf    
+ymax                   2095                  2095                      2095                 2090                    
+hhea.ascent            2095                  2095                      2095                 2095                    
+OS/2.sTypoAscender     2095                  2095                      2095                 2095                    
+OS/2.usWinAscent       2095                  2095                      2095                 2095                    
+ymin                   -781                  -781                      -781                 -646                    
+hhea.descent           -781                  -781                      -781                 -781                    
+OS/2.sTypoDescender    -781                  -781                      -781                 -781                    
+OS/2.usWinDescent      781                   781                       781                  781                     
+hhea.lineGap           0                     0                         0                    0                       
+OS/2.sTypoLineGap      0                     0                         0                    0                       
+hhea total             2876                  2876                      2876                 2876                    
+typo total             2876                  2876                      2876                 2876                    
+win total              2876                  2876                      2876                 2876                    
+UPM:Heights            2048:2876             2048:2876                 2048:2876            2048:2736               
+UPM:Heights %          140 %                 140 %                     140 %                133 %                   
+
+
+bakery_lint.tests.downstream.test_check_vertical_metrics.CheckVerticalAscentMetrics.test_metrics_ascents_equal_bbox(): OK
+bakery_lint.tests.downstream.test_check_vertical_metrics.CheckVerticalDescentMetrics.test_metrics_descents_equal_bbox(): OK
+bakery_lint.tests.downstream.test_check_upm_heights_less_120.TestCheckUPMHeightsLess120.test_check_upm_heigths_less_120(): FAIL
+bakery_lint.tests.downstream.test_check_unused_glyph_data.CheckUnusedGlyphData.test_check_unused_glyph_data(): ERROR
+bakery_lint.tests.downstream.test_check_unencoded_glyph.TestFontUnencodedGlyph.test_font_unencoded_glyphs(): FAIL
+$ fontbakery-fix-glyph-private-encoding.py --autofix /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Heavy.ttf
+$ mv /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Heavy.ttf.fix /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Heavy.ttf
+bakery_lint.tests.downstream.test_check_unencoded_glyph.TestFontUnencodedGlyph.test_font_unencoded_glyphs(): FAIL
+bakery_lint.tests.downstream.test_check_panose_identification.CheckPanoseIdentification.test_check_panose_identification(): OK
+bakery_lint.tests.downstream.test_check_os2_width_class.CheckOS2WidthClass.test_check_os2_width_class(): OK
+bakery_lint.tests.downstream.test_check_no_problematic_formats.CheckNoProblematicFormats.test_check_no_problematic_formats(): OK
+bakery_lint.tests.downstream.test_check_nbsp_width_matches_sp_width.CheckNbspWidthMatchesSpWidth.test_check_nbsp_width_matches_sp_width(): FAIL
+$ fontbakery-fix-nbsp.py /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Heavy.ttf
+$ mv /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Heavy.ttf.fix /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Heavy.ttf
+bakery_lint.tests.downstream.test_check_nbsp_width_matches_sp_width.CheckNbspWidthMatchesSpWidth.test_check_nbsp_width_matches_sp_width(): FAIL
+bakery_lint.tests.downstream.test_check_names_same_across_platforms.CheckNamesSameAcrossPlatforms.test_check_names_same_across_platforms(): OK
+bakery_lint.tests.downstream.test_check_name_table_recommendation.CheckStyleNameRecommendation.test_check_stylename_is_under_recommendations(): OK
+bakery_lint.tests.downstream.test_check_name_table_recommendation.CheckOTFamilyNameRecommendation.test_check_opentype_familyname(): FAIL
+$ fontbakery-fix-opentype-names.py /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Heavy.ttf
+$ mv /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Heavy.ttf.fix /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Heavy.ttf
+bakery_lint.tests.downstream.test_check_name_table_recommendation.CheckOTFamilyNameRecommendation.test_check_opentype_familyname(): OK
+bakery_lint.tests.downstream.test_check_name_table_recommendation.CheckOTStyleNameRecommendation.test_check_opentype_stylename(): OK
+bakery_lint.tests.downstream.test_check_name_table_recommendation.CheckOTFullNameRecommendation.test_check_opentype_fullname(): OK
+bakery_lint.tests.downstream.test_check_magic_prep_code.CheckMagicPREPByteCode.test_prep_magic_code(): FAIL
+bakery_lint.tests.downstream.test_check_license_included.CheckLicenseIncluded.test_license_included_in_font_names(): OK
+bakery_lint.tests.downstream.test_check_italic_angle_agreement.CheckItalicAngleAgreement.test_check_italic_angle_agreement(): OK
+bakery_lint.tests.downstream.test_check_hmtx_hhea_max_advance_width_agreement.CheckHmtxHheaMaxAdvanceWidthAgreement.test_check_hmtx_hhea_max_advance_width_agreement(): OK
+bakery_lint.tests.downstream.test_check_glyph_existence.CheckGlyphExistence.test_euro(): OK
+bakery_lint.tests.downstream.test_check_glyph_existence.CheckGlyphExistence.test_nbsp(): OK
+bakery_lint.tests.downstream.test_check_glyph_existence.CheckGlyphExistence.test_space(): OK
+bakery_lint.tests.downstream.test_check_glyf_table_length.CheckGlyfTableLength.test_check_glyf_table_length(): FAIL
+bakery_lint.tests.downstream.test_check_full_font_name_begins_with_family_name.CheckFullFontNameBeginsWithFamilyName.test_check_full_font_name_begins_with_family_name(): OK
+bakery_lint.tests.downstream.test_check_fontname_matches_macstyle.CheckFontNameEqualToMacStyleFlags.test_fontname_is_equal_to_macstyle(): FAIL
+bakery_lint.tests.downstream.test_check_font_tables.CheckFontHasDsigTable.test_check_font_has_dsig_table(): OK
+bakery_lint.tests.downstream.test_check_font_tables.CheckFontHasNotKernTable.test_no_kern_table_exists(): OK
+bakery_lint.tests.downstream.test_check_font_agreements.CheckFsTypeIsNotSet.test_is_fstype_not_set(): OK
+$ fontbakery-fix-fstype.py --autofix /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Heavy.ttf
+$ mv /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Heavy.ttf.fix /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Heavy.ttf
+bakery_lint.tests.downstream.test_check_font_agreements.CheckFontAgreements.test_em_is_1000(): FAIL
+bakery_lint.tests.downstream.test_check_font_agreements.CheckFontAgreements.test_font_is_font(): OK
+bakery_lint.tests.downstream.test_check_font_agreements.CheckFontAgreements.test_latin_file_exists(): FAIL
+bakery_lint.tests.downstream.test_check_font_agreements.CheckFontAgreements.test_menu_file_exists(): FAIL
+### Optimize TTF Coustard-Heavy.ttf
+$ ls -l 'Coustard-Heavy.ttf'* # look at the size savings of that subset process
+Coustard-Heavy.ttf.opt: 39232 bytes
+Coustard-Heavy.ttf: 42108 bytes
+$ mv /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Heavy.ttf.opt /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Heavy.ttf
+### Autohint TTFs (ttfautohint) Coustard-Heavy.ttf
+$ ttfautohint -l 7 -r 28 -G 50 -x 13 -w "G" /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Heavy.ttf '/home/travis/build/fontdirectory/coustard/builds/build/Coustard-Heavy.autohint.ttf'
+
+$ ls -l /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Heavy.*ttf # look at the size savings of that subset process
+/home/travis/build/fontdirectory/coustard/builds/build/Coustard-Heavy.ttf: 39232 bytes
+/home/travis/build/fontdirectory/coustard/builds/build/Coustard-Heavy.autohint.ttf: 57708 bytes
+$ mv /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Heavy.autohint.ttf /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Heavy.ttf
+### Subset TTFs (pyftsubset) Coustard-Heavy.ttf
+$ pyftsubset Coustard-Heavy.latin
+$ pyftsubset Coustard-Heavy.menu
+strippedname:/home/travis/build/fontdirectory/coustard/builds/build/Coustard-Heavy.ttf
+spaceWidth is    442
+nbspWidth is     250
+Coustard-Heavy.ttf.fix made with spaceWidth and nbspWidth of 442
+$ fontbakery-build-font2ttf.py sources/Coustard-Regular-TTF.sfd Coustard-Regular-TTF.ttf
+Success: Generated OpenType-TTF (/home/travis/build/fontdirectory/coustard/builds/build/Coustard-Regular-TTF.ttf)
+### Test Coustard-Regular-TTF.ttf
+$ fontbakery-check.py result Coustard-Regular-TTF.ttf
+bakery_lint.tests.downstream.test_names_are_ascii_only.CheckNamesAreASCIIOnly.test_check_names_are_ascii_only(): OK
+bakery_lint.tests.downstream.test_gpos_table_has_kerning_info.CheckGposTableHasKerningInfo.test_gpos_table_has_kerning_info(): ERROR
+bakery_lint.tests.downstream.test_gasp_table_value.CheckGaspTableType.test_check_gasp_table_type(): OK
+$ fontbakery-fix-gasp.py --set=15 /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Regular-TTF.ttf
+$ mv /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Regular-TTF.ttf.fix /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Regular-TTF.ttf
+The following table(s) in the font have been ignored by FontForge
+  Ignoring 'DSIG' digital signature table
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_allowed_numbers_paths_in_composite_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_allowed_numbers_paths_in_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_allowed_numbers_points_in_composite_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_allowed_numbers_points_in_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_duplicate_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_duplicate_unicode_codepoints(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_flipped_reference_in_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_missing_anchors(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_missing_extrema_in_glyphs(): FAIL
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_overlapped_hints(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_points_are_integer_aligned(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_points_are_not_too_far_apart(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_postscript_hasnt_limit_hints_in_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_postscript_hasnt_limit_points_in_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_referenced_glyphs_are_present(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_valid_glyph_names(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_valid_length_instructions(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_validation_glyph_intersect(): FAIL
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_validation_open_contours(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_wrong_direction_in_glyphs(): OK
+bakery_lint.tests.downstream.test_check_vertical_metrics.CheckVerticalLinegapMetrics.test_metrics_linegaps_are_zero(): OK
+bakery_lint.tests.downstream.test_check_vertical_metrics.CheckVerticalAscentMetrics.test_metrics_ascents_equal_bbox(): OK
+bakery_lint.tests.downstream.test_check_vertical_metrics.CheckVerticalDescentMetrics.test_metrics_descents_equal_bbox(): OK
+bakery_lint.tests.downstream.test_check_upm_heights_less_120.TestCheckUPMHeightsLess120.test_check_upm_heigths_less_120(): FAIL
+bakery_lint.tests.downstream.test_check_unused_glyph_data.CheckUnusedGlyphData.test_check_unused_glyph_data(): ERROR
+bakery_lint.tests.downstream.test_check_unencoded_glyph.TestFontUnencodedGlyph.test_font_unencoded_glyphs(): FAIL
+$ fontbakery-fix-glyph-private-encoding.py --autofix /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Regular-TTF.ttf
+$ mv /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Regular-TTF.ttf.fix /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Regular-TTF.ttf
+bakery_lint.tests.downstream.test_check_unencoded_glyph.TestFontUnencodedGlyph.test_font_unencoded_glyphs(): FAIL
+bakery_lint.tests.downstream.test_check_panose_identification.CheckPanoseIdentification.test_check_panose_identification(): OK
+bakery_lint.tests.downstream.test_check_os2_width_class.CheckOS2WidthClass.test_check_os2_width_class(): OK
+bakery_lint.tests.downstream.test_check_no_problematic_formats.CheckNoProblematicFormats.test_check_no_problematic_formats(): OK
+bakery_lint.tests.downstream.test_check_nbsp_width_matches_sp_width.CheckNbspWidthMatchesSpWidth.test_check_nbsp_width_matches_sp_width(): FAIL
+$ fontbakery-fix-nbsp.py /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Regular-TTF.ttf
+$ mv /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Regular-TTF.ttf.fix /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Regular-TTF.ttf
+bakery_lint.tests.downstream.test_check_nbsp_width_matches_sp_width.CheckNbspWidthMatchesSpWidth.test_check_nbsp_width_matches_sp_width(): OK
+bakery_lint.tests.downstream.test_check_names_same_across_platforms.CheckNamesSameAcrossPlatforms.test_check_names_same_across_platforms(): OK
+bakery_lint.tests.downstream.test_check_name_table_recommendation.CheckStyleNameRecommendation.test_check_stylename_is_under_recommendations(): OK
+bakery_lint.tests.downstream.test_check_name_table_recommendation.CheckOTFamilyNameRecommendation.test_check_opentype_familyname(): FAIL
+$ fontbakery-fix-opentype-names.py /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Regular-TTF.ttf
+$ mv /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Regular-TTF.ttf.fix /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Regular-TTF.ttf
+bakery_lint.tests.downstream.test_check_name_table_recommendation.CheckOTFamilyNameRecommendation.test_check_opentype_familyname(): OK
+bakery_lint.tests.downstream.test_check_name_table_recommendation.CheckOTStyleNameRecommendation.test_check_opentype_stylename(): OK
+bakery_lint.tests.downstream.test_check_name_table_recommendation.CheckOTFullNameRecommendation.test_check_opentype_fullname(): OK
+bakery_lint.tests.downstream.test_check_magic_prep_code.CheckMagicPREPByteCode.test_prep_magic_code(): FAIL
+bakery_lint.tests.downstream.test_check_license_included.CheckLicenseIncluded.test_license_included_in_font_names(): OK
+bakery_lint.tests.downstream.test_check_italic_angle_agreement.CheckItalicAngleAgreement.test_check_italic_angle_agreement(): OK
+bakery_lint.tests.downstream.test_check_hmtx_hhea_max_advance_width_agreement.CheckHmtxHheaMaxAdvanceWidthAgreement.test_check_hmtx_hhea_max_advance_width_agreement(): OK
+bakery_lint.tests.downstream.test_check_glyph_existence.CheckGlyphExistence.test_euro(): OK
+bakery_lint.tests.downstream.test_check_glyph_existence.CheckGlyphExistence.test_nbsp(): OK
+bakery_lint.tests.downstream.test_check_glyph_existence.CheckGlyphExistence.test_space(): OK
+bakery_lint.tests.downstream.test_check_glyf_table_length.CheckGlyfTableLength.test_check_glyf_table_length(): FAIL
+bakery_lint.tests.downstream.test_check_full_font_name_begins_with_family_name.CheckFullFontNameBeginsWithFamilyName.test_check_full_font_name_begins_with_family_name(): OK
+bakery_lint.tests.downstream.test_check_fontname_matches_macstyle.CheckFontNameEqualToMacStyleFlags.test_fontname_is_equal_to_macstyle(): FAIL
+bakery_lint.tests.downstream.test_check_font_tables.CheckFontHasDsigTable.test_check_font_has_dsig_table(): OK
+bakery_lint.tests.downstream.test_check_font_tables.CheckFontHasNotKernTable.test_no_kern_table_exists(): OK
+bakery_lint.tests.downstream.test_check_font_agreements.CheckFsTypeIsNotSet.test_is_fstype_not_set(): OK
+$ fontbakery-fix-fstype.py --autofix /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Regular-TTF.ttf
+$ mv /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Regular-TTF.ttf.fix /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Regular-TTF.ttf
+bakery_lint.tests.downstream.test_check_font_agreements.CheckFontAgreements.test_em_is_1000(): FAIL
+bakery_lint.tests.downstream.test_check_font_agreements.CheckFontAgreements.test_font_is_font(): OK
+bakery_lint.tests.downstream.test_check_font_agreements.CheckFontAgreements.test_latin_file_exists(): FAIL
+bakery_lint.tests.downstream.test_check_font_agreements.CheckFontAgreements.test_menu_file_exists(): FAIL
+### Optimize TTF Coustard-Regular-TTF.ttf
+$ ls -l 'Coustard-Regular-TTF.ttf'* # look at the size savings of that subset process
+Coustard-Regular-TTF.ttf.opt: 39060 bytes
+Coustard-Regular-TTF.ttf: 41976 bytes
+$ mv /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Regular-TTF.ttf.opt /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Regular-TTF.ttf
+### Autohint TTFs (ttfautohint) Coustard-Regular-TTF.ttf
+$ ttfautohint -l 7 -r 28 -G 50 -x 13 -w "G" /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Regular-TTF.ttf '/home/travis/build/fontdirectory/coustard/builds/build/Coustard-Regular-TTF.autohint.ttf'
+
+$ ls -l /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Regular-TTF.*ttf # look at the size savings of that subset process
+/home/travis/build/fontdirectory/coustard/builds/build/Coustard-Regular-TTF.ttf: 39060 bytes
+/home/travis/build/fontdirectory/coustard/builds/build/Coustard-Regular-TTF.autohint.ttf: 57568 bytes
+$ mv /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Regular-TTF.autohint.ttf /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Regular-TTF.ttf
+### Subset TTFs (pyftsubset) Coustard-Regular-TTF.ttf
+$ pyftsubset Coustard-Regular-TTF.latin
+$ pyftsubset Coustard-Regular-TTF.menu
+strippedname:/home/travis/build/fontdirectory/coustard/builds/build/Coustard-Regular-TTF.ttf
+spaceWidth is    500
+nbspWidth is     86
+Coustard-Regular-TTF.ttf.fix made with spaceWidth and nbspWidth of 500
+$ fontbakery-build-font2ttf.py sources/Coustard-Regular.sfd Coustard-Regular.ttf
+Success: Generated OpenType-TTF (/home/travis/build/fontdirectory/coustard/builds/build/Coustard-Regular.ttf)
+### Test Coustard-Regular.ttf
+$ fontbakery-check.py result Coustard-Regular.ttf
+bakery_lint.tests.downstream.test_names_are_ascii_only.CheckNamesAreASCIIOnly.test_check_names_are_ascii_only(): OK
+bakery_lint.tests.downstream.test_gpos_table_has_kerning_info.CheckGposTableHasKerningInfo.test_gpos_table_has_kerning_info(): ERROR
+bakery_lint.tests.downstream.test_gasp_table_value.CheckGaspTableType.test_check_gasp_table_type(): FAIL
+$ fontbakery-fix-gasp.py --set=15 /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Regular.ttf
+$ mv /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Regular.ttf.fix /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Regular.ttf
+bakery_lint.tests.downstream.test_gasp_table_value.CheckGaspTableType.test_check_gasp_table_type(): OK
+$ fontbakery-fix-gasp.py --set=15 /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Regular.ttf
+$ mv /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Regular.ttf.fix /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Regular.ttf
+The following table(s) in the font have been ignored by FontForge
+  Ignoring 'DSIG' digital signature table
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_allowed_numbers_paths_in_composite_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_allowed_numbers_paths_in_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_allowed_numbers_points_in_composite_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_allowed_numbers_points_in_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_duplicate_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_duplicate_unicode_codepoints(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_flipped_reference_in_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_missing_anchors(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_missing_extrema_in_glyphs(): FAIL
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_overlapped_hints(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_points_are_integer_aligned(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_points_are_not_too_far_apart(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_postscript_hasnt_limit_hints_in_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_postscript_hasnt_limit_points_in_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_referenced_glyphs_are_present(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_valid_glyph_names(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_valid_length_instructions(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_validation_glyph_intersect(): FAIL
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_validation_open_contours(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_wrong_direction_in_glyphs(): OK
+bakery_lint.tests.downstream.test_check_vertical_metrics.CheckVerticalLinegapMetrics.test_metrics_linegaps_are_zero(): OK
+bakery_lint.tests.downstream.test_check_vertical_metrics.CheckVerticalAscentMetrics.test_metrics_ascents_equal_bbox(): FAIL
+$ fontbakery-fix-vertical-metrics.py --autofix /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Regular.ttf /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Regular-TTF.ttf /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Heavy.ttf /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Bold.ttf /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Black-TTF.ttf
+$ mv /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Regular.ttf.fix /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Regular.ttf
+$ mv /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Regular-TTF.ttf.fix /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Regular-TTF.ttf
+$ mv /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Heavy.ttf.fix /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Heavy.ttf
+$ mv /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Bold.ttf.fix /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Bold.ttf
+$ mv /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Black-TTF.ttf.fix /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Black-TTF.ttf
+$ fontbakery-fix-vertical-metrics.py /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Regular.ttf /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Regular-TTF.ttf /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Heavy.ttf /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Bold.ttf /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Black-TTF.ttf
+Parameter              Coustard-Regular.ttf    Coustard-Regular-TTF.ttf    Coustard-Heavy.ttf    Coustard-Bold.ttf    Coustard-Black-TTF.ttf    
+ymax                   2090                    2090                        2095                  2095                 2095                      
+hhea.ascent            2095                    2095                        2095                  2095                 2095                      
+OS/2.sTypoAscender     2095                    2095                        2095                  2095                 2095                      
+OS/2.usWinAscent       2095                    2095                        2095                  2095                 2095                      
+ymin                   -646                    -646                        -781                  -781                 -781                      
+hhea.descent           -781                    -781                        -781                  -781                 -781                      
+OS/2.sTypoDescender    -781                    -781                        -781                  -781                 -781                      
+OS/2.usWinDescent      781                     781                         781                   781                  781                       
+hhea.lineGap           0                       0                           0                     0                    0                         
+OS/2.sTypoLineGap      0                       0                           0                     0                    0                         
+hhea total             2876                    2876                        2876                  2876                 2876                      
+typo total             2876                    2876                        2876                  2876                 2876                      
+win total              2876                    2876                        2876                  2876                 2876                      
+UPM:Heights            2048:2736               2048:2736                   2048:2876             2048:2876            2048:2876                 
+UPM:Heights %          133 %                   133 %                       140 %                 140 %                140 %                     
+
+
+bakery_lint.tests.downstream.test_check_vertical_metrics.CheckVerticalAscentMetrics.test_metrics_ascents_equal_bbox(): OK
+bakery_lint.tests.downstream.test_check_vertical_metrics.CheckVerticalDescentMetrics.test_metrics_descents_equal_bbox(): OK
+bakery_lint.tests.downstream.test_check_upm_heights_less_120.TestCheckUPMHeightsLess120.test_check_upm_heigths_less_120(): FAIL
+bakery_lint.tests.downstream.test_check_unused_glyph_data.CheckUnusedGlyphData.test_check_unused_glyph_data(): ERROR
+bakery_lint.tests.downstream.test_check_unencoded_glyph.TestFontUnencodedGlyph.test_font_unencoded_glyphs(): FAIL
+$ fontbakery-fix-glyph-private-encoding.py --autofix /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Regular.ttf
+$ mv /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Regular.ttf.fix /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Regular.ttf
+bakery_lint.tests.downstream.test_check_unencoded_glyph.TestFontUnencodedGlyph.test_font_unencoded_glyphs(): FAIL
+bakery_lint.tests.downstream.test_check_panose_identification.CheckPanoseIdentification.test_check_panose_identification(): OK
+bakery_lint.tests.downstream.test_check_os2_width_class.CheckOS2WidthClass.test_check_os2_width_class(): OK
+bakery_lint.tests.downstream.test_check_no_problematic_formats.CheckNoProblematicFormats.test_check_no_problematic_formats(): OK
+bakery_lint.tests.downstream.test_check_nbsp_width_matches_sp_width.CheckNbspWidthMatchesSpWidth.test_check_nbsp_width_matches_sp_width(): FAIL
+$ fontbakery-fix-nbsp.py /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Regular.ttf
+$ mv /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Regular.ttf.fix /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Regular.ttf
+bakery_lint.tests.downstream.test_check_nbsp_width_matches_sp_width.CheckNbspWidthMatchesSpWidth.test_check_nbsp_width_matches_sp_width(): FAIL
+bakery_lint.tests.downstream.test_check_names_same_across_platforms.CheckNamesSameAcrossPlatforms.test_check_names_same_across_platforms(): OK
+bakery_lint.tests.downstream.test_check_name_table_recommendation.CheckStyleNameRecommendation.test_check_stylename_is_under_recommendations(): OK
+bakery_lint.tests.downstream.test_check_name_table_recommendation.CheckOTFamilyNameRecommendation.test_check_opentype_familyname(): FAIL
+$ fontbakery-fix-opentype-names.py /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Regular.ttf
+$ mv /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Regular.ttf.fix /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Regular.ttf
+bakery_lint.tests.downstream.test_check_name_table_recommendation.CheckOTFamilyNameRecommendation.test_check_opentype_familyname(): OK
+bakery_lint.tests.downstream.test_check_name_table_recommendation.CheckOTStyleNameRecommendation.test_check_opentype_stylename(): OK
+bakery_lint.tests.downstream.test_check_name_table_recommendation.CheckOTFullNameRecommendation.test_check_opentype_fullname(): OK
+bakery_lint.tests.downstream.test_check_magic_prep_code.CheckMagicPREPByteCode.test_prep_magic_code(): FAIL
+bakery_lint.tests.downstream.test_check_license_included.CheckLicenseIncluded.test_license_included_in_font_names(): OK
+bakery_lint.tests.downstream.test_check_italic_angle_agreement.CheckItalicAngleAgreement.test_check_italic_angle_agreement(): OK
+bakery_lint.tests.downstream.test_check_hmtx_hhea_max_advance_width_agreement.CheckHmtxHheaMaxAdvanceWidthAgreement.test_check_hmtx_hhea_max_advance_width_agreement(): OK
+bakery_lint.tests.downstream.test_check_glyph_existence.CheckGlyphExistence.test_euro(): OK
+bakery_lint.tests.downstream.test_check_glyph_existence.CheckGlyphExistence.test_nbsp(): OK
+bakery_lint.tests.downstream.test_check_glyph_existence.CheckGlyphExistence.test_space(): OK
+bakery_lint.tests.downstream.test_check_glyf_table_length.CheckGlyfTableLength.test_check_glyf_table_length(): FAIL
+bakery_lint.tests.downstream.test_check_full_font_name_begins_with_family_name.CheckFullFontNameBeginsWithFamilyName.test_check_full_font_name_begins_with_family_name(): OK
+bakery_lint.tests.downstream.test_check_fontname_matches_macstyle.CheckFontNameEqualToMacStyleFlags.test_fontname_is_equal_to_macstyle(): FAIL
+bakery_lint.tests.downstream.test_check_font_tables.CheckFontHasDsigTable.test_check_font_has_dsig_table(): OK
+bakery_lint.tests.downstream.test_check_font_tables.CheckFontHasNotKernTable.test_no_kern_table_exists(): OK
+bakery_lint.tests.downstream.test_check_font_agreements.CheckFsTypeIsNotSet.test_is_fstype_not_set(): OK
+$ fontbakery-fix-fstype.py --autofix /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Regular.ttf
+$ mv /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Regular.ttf.fix /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Regular.ttf
+bakery_lint.tests.downstream.test_check_font_agreements.CheckFontAgreements.test_em_is_1000(): FAIL
+bakery_lint.tests.downstream.test_check_font_agreements.CheckFontAgreements.test_font_is_font(): OK
+bakery_lint.tests.downstream.test_check_font_agreements.CheckFontAgreements.test_latin_file_exists(): OK
+bakery_lint.tests.downstream.test_check_font_agreements.CheckFontAgreements.test_menu_file_exists(): OK
+### Optimize TTF Coustard-Regular.ttf
+$ ls -l 'Coustard-Regular.ttf'* # look at the size savings of that subset process
+Coustard-Regular.ttf.opt: 38776 bytes
+Coustard-Regular.ttf: 41644 bytes
+$ mv /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Regular.ttf.opt /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Regular.ttf
+### Autohint TTFs (ttfautohint) Coustard-Regular.ttf
+$ ttfautohint -l 7 -r 28 -G 50 -x 13 -w "G" /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Regular.ttf '/home/travis/build/fontdirectory/coustard/builds/build/Coustard-Regular.autohint.ttf'
+
+$ ls -l /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Regular.*ttf # look at the size savings of that subset process
+/home/travis/build/fontdirectory/coustard/builds/build/Coustard-Regular.ttf: 38776 bytes
+/home/travis/build/fontdirectory/coustard/builds/build/Coustard-Regular.autohint.ttf: 60044 bytes
+$ mv /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Regular.autohint.ttf /home/travis/build/fontdirectory/coustard/builds/build/Coustard-Regular.ttf
+### Subset TTFs (pyftsubset) Coustard-Regular.ttf
+$ pyftsubset Coustard-Regular.latin
+$ pyftsubset Coustard-Regular.menu
+strippedname:/home/travis/build/fontdirectory/coustard/builds/build/Coustard-Regular.ttf
+spaceWidth is    500
+nbspWidth is     86
+Coustard-Regular.ttf.fix made with spaceWidth and nbspWidth of 500
+### (5 of 6) Generate METADATA.json (fontbakery-build-metadata.py)
+$ fontbakery-build-metadata.py /home/travis/build/fontdirectory/coustard/builds/build
+{} exists
+No Designer Name known, using Multiple Designers for now...
+Original size: 60044\nGzip size: 33896
+Family Name: Coustard
+PS Name: Coustard
+Full Name: Coustard
+Style: normal
+Weight: 400
+Filename: Coustard-Regular.ttf
+Copyright: Copyright (c) 2011 by vernon adams. All rights reserved. with\nReserved Font Names "Coustard" and "Coustard Regular". This\nFont Software is licensed under the SIL Open Font License, Version\n1.1. This license is available with a FAQ at:\nhttp://scripts.sil.org/OFL
+Family Name: Coustard
+PS Name: Coustard-Black
+Full Name: Coustard-Black
+Style: normal
+Weight: 900
+Filename: Coustard-Black-TTF.ttf
+Copyright: Copyright (c) 2011 by vernon adams. All rights reserved. with\nReserved Font Names "Coustard" and "Coustard Black". This\nFont Software is licensed under the SIL Open Font License, Version\n1.1. This license is available with a FAQ at:\nhttp://scripts.sil.org/OFL
+Family Name: Coustard
+PS Name: Coustard-Black
+Full Name: Coustard-Black
+Style: normal
+Weight: 900
+Filename: Coustard-Bold.ttf
+Copyright: Copyright (c) 2011 by vernon adams. All rights reserved. with\nReserved Font Names "Coustard" and "Coustard Black". This\nFont Software is licensed under the SIL Open Font License, Version\n1.1. This license is available with a FAQ at:\nhttp://scripts.sil.org/OFL
+Family Name: Coustard
+PS Name: Coustard-Black
+Full Name: Coustard-Black
+Style: normal
+Weight: 900
+Filename: Coustard-Heavy.ttf
+Copyright: Copyright (c) 2011 by vernon adams. All rights reserved. with\nReserved Font Names "Coustard" and "Coustard Black". This\nFont Software is licensed under the SIL Open Font License, Version\n1.1. This license is available with a FAQ at:\nhttp://scripts.sil.org/OFL
+Family Name: Coustard
+PS Name: Coustard
+Full Name: Coustard
+Style: normal
+Weight: 400
+Filename: Coustard-Regular-TTF.ttf
+Copyright: Copyright (c) 2011 by vernon adams. All rights reserved. with\nReserved Font Names "Coustard" and "Coustard Regular". This\nFont Software is licensed under the SIL Open Font License, Version\n1.1. This license is available with a FAQ at:\nhttp://scripts.sil.org/OFL
+### (6 of 6) Run tests for METADATA.json
+$ fontbakery-check.py metadata METADATA.json
+bakery_lint.tests.metadata_test.MetadataSubsetsListTest.test_charset_latin(): FAIL
+bakery_lint.tests.metadata_test.MetadataSubsetsListTest.test_charset_menu(): FAIL
+bakery_lint.tests.metadata_test.MetadataTest.test_description_is_more_than_500b(): FAIL
+bakery_lint.tests.metadata_test.MetadataTest.test_description_is_valid_html(): FAIL
+bakery_lint.tests.metadata_test.MetadataTest.test_does_not_familyName_exist_in_daltonmaag_catalogue(): FAIL
+bakery_lint.tests.metadata_test.MetadataTest.test_does_not_familyName_exist_in_fontbureau_catalogue(): OK
+bakery_lint.tests.metadata_test.MetadataTest.test_does_not_familyName_exist_in_fontscom_catalogue(): FAIL
+bakery_lint.tests.metadata_test.MetadataTest.test_does_not_familyName_exist_in_fontshop_catalogue(): FAIL
+bakery_lint.tests.metadata_test.MetadataTest.test_does_not_familyName_exist_in_fontsmith_catalogue(): FAIL
+bakery_lint.tests.metadata_test.MetadataTest.test_does_not_familyName_exist_in_houseind_catalogue(): OK
+bakery_lint.tests.metadata_test.MetadataTest.test_does_not_familyName_exist_in_myfonts_catalogue(): FAIL
+bakery_lint.tests.metadata_test.MetadataTest.test_does_not_familyName_exist_in_veer_catalogue(): FAIL
+bakery_lint.tests.metadata_test.MetadataTest.test_family_is_listed_in_gwf(): OK
+bakery_lint.tests.metadata_test.MetadataTest.test_metadata_atleast_latin_menu_subsets_exist(): OK
+/home/travis/virtualenv/python2.7.8/lib/python2.7/site-packages/bakery_lint/tests/metadata_test.py:141: UnicodeWarning: Unicode equal comparison failed to convert both arguments to Unicode - interpreting them as being unequal
+  self.assertTrue(designer in designers,
+bakery_lint.tests.metadata_test.MetadataTest.test_metadata_designer_exists_in_profiles_csv(): OK
+bakery_lint.tests.metadata_test.MetadataTest.test_metadata_fonts_items_dicts(): OK
+bakery_lint.tests.metadata_test.MetadataTest.test_metadata_fonts_key_list(): OK
+bakery_lint.tests.metadata_test.MetadataTest.test_metadata_fonts_no_dupes(): OK
+bakery_lint.tests.metadata_test.MetadataTest.test_metadata_has_unique_style_weight_pairs(): OK
+bakery_lint.tests.metadata_test.MetadataTest.test_metadata_keys(): OK
+bakery_lint.tests.metadata_test.MetadataTest.test_metadata_license(): OK
+bakery_lint.tests.metadata_test.MetadataTest.test_metadata_no_unknown_top_keys(): OK
+bakery_lint.tests.metadata_test.MetadataTest.test_metadata_subsets_key_list(): OK
+bakery_lint.tests.metadata_test.MetadataTest.test_metadata_top_keys_types(): OK
+bakery_lint.tests.downstream.test_metadata_font_copyright.CheckMetadataContainsReservedFontName.test_copyright_contains_correct_rfn(): OK
+bakery_lint.tests.downstream.test_metadata_font_copyright.CheckMetadataContainsReservedFontName.test_copyright_is_consistent_across_family(): FAIL
+bakery_lint.tests.downstream.test_metadata_font_copyright.CheckMetadataContainsReservedFontName.test_copyright_matches_pattern(): OK
+bakery_lint.tests.downstream.test_metadata_font_copyright.CheckMetadataContainsReservedFontName.test_metadata_copyright_size(): OK
+bakery_lint.tests.downstream.test_metadata_agreements.TestFontOnDiskFamilyEqualToMetadataJSON.test_font_on_disk_family_equal_in_metadata_json(): OK
+bakery_lint.tests.downstream.test_metadata_agreements.TestPostScriptNameInMetadataEqualFontOnDisk.test_postscriptname_in_metadata_equal_to_font_on_disk(): OK
+bakery_lint.tests.downstream.test_metadata_agreements.CheckMetadataAgreements.test_font_name_matches_family(): ERROR
+bakery_lint.tests.downstream.test_metadata_agreements.CheckMetadataAgreements.test_metadata_family_values_are_all_the_same(): OK
+bakery_lint.tests.downstream.test_metadata_agreements.CheckMetadataAgreements.test_metadata_filename_matches_postscriptname(): FAIL
+bakery_lint.tests.downstream.test_metadata_agreements.CheckMetadataAgreements.test_metadata_font_have_regular(): OK
+bakery_lint.tests.downstream.test_metadata_agreements.CheckMetadataAgreements.test_metadata_fonts_fields_have_fontname(): ERROR
+bakery_lint.tests.downstream.test_metadata_agreements.CheckMetadataAgreements.test_metadata_fullname_is_equal_to_internal_font_fullname(): ERROR
+bakery_lint.tests.downstream.test_metadata_agreements.CheckMetadataAgreements.test_metadata_fullname_matches_postScriptName(): OK
+bakery_lint.tests.downstream.test_metadata_agreements.CheckMetadataAgreements.test_metadata_regular_is_400(): OK
+bakery_lint.tests.downstream.test_metadata_agreements.CheckMetadataAgreements.test_metadata_regular_is_normal(): FAIL
+bakery_lint.tests.downstream.test_check_text_files_exist.CheckTextFilesExist.test_copyrighttxt_exists(): FAIL
+bakery_lint.tests.downstream.test_check_text_files_exist.CheckTextFilesExist.test_description_exists(): OK
+bakery_lint.tests.downstream.test_check_text_files_exist.CheckTextFilesExist.test_fontlogtxt_exists(): FAIL
+bakery_lint.tests.downstream.test_check_text_files_exist.CheckTextFilesExist.test_licensetxt_exists(): FAIL
+bakery_lint.tests.downstream.test_check_subsets_exists.CheckSubsetsExist.test_check_subsets_exists(): FAIL
+bakery_lint.tests.downstream.test_check_monospace_agreements.CheckMonospaceAgreement.test_check_monospace_agreement(): OK
+bakery_lint.tests.downstream.test_check_metadata_style_matches_names.CheckItalicStyleMatchesMacStyle.test_check_italic_style_matches_names(): OK
+bakery_lint.tests.downstream.test_check_metadata_style_matches_names.CheckNormalStyleMatchesMacStyle.test_check_normal_style_matches_names(): ERROR
+bakery_lint.tests.downstream.test_check_metadata_matches_nametable.CheckMetadataMatchesNameTable.test_check_metadata_matches_nametable(): ERROR
+bakery_lint.tests.downstream.test_check_metadata_fields.CheckMetadataFields.test_check_metadata_fields(): OK
+bakery_lint.tests.downstream.test_check_menu_contains_proper_glyphs.CheckMenuSubsetContainsProperGlyphs.test_check_menu_contains_proper_glyphs(): FAIL
+bakery_lint.tests.downstream.test_check_glyph_consistency.CheckGlyphConsistencyInFamily.test_the_same_encodings_of_glyphs_across_family(): ERROR
+bakery_lint.tests.downstream.test_check_glyph_consistency.CheckGlyphConsistencyInFamily.test_the_same_names_of_glyphs_across_family(): ERROR
+bakery_lint.tests.downstream.test_check_glyph_consistency.CheckGlyphConsistencyInFamily.test_the_same_number_of_glyphs_across_family(): ERROR
+bakery_lint.tests.downstream.test_check_font_name_not_in_camelcase.CheckFontNameNotInCamelCase.test_fontname_not_in_camel_case(): OK
+bakery_lint.tests.downstream.test_check_files_menu_agreements.CheckFontsMenuAgreements.test_menu_file_agreement(): FAIL
+bakery_lint.tests.downstream.test_check_familyname_matches_fontnames.CheckFamilyNameMatchesFontNames.test_check_familyname_matches_fontnames(): OK
+bakery_lint.tests.downstream.test_check_canonical_weights.CheckCanonicalWeights.test_check_canonical_weights(): ERROR
+bakery_lint.tests.downstream.test_check_canonical_weights.CheckPostScriptNameMatchesWeight.test_postscriptname_contains_correct_weight(): FAIL
+bakery_lint.tests.downstream.test_check_canonical_weights.CheckFontWeightSameAsInMetadata.test_font_weight_same_as_in_metadata(): ERROR
+bakery_lint.tests.downstream.test_check_canonical_weights.CheckFullNameEqualCanonicalName.test_metadata_contains_current_font(): ERROR
+bakery_lint.tests.downstream.test_check_canonical_styles.CheckCanonicalStyles.test_check_canonical_styles(): ERROR
+bakery_lint.tests.downstream.test_check_canonical_filenames.CheckCanonicalFilenames.test_check_canonical_filenames(): OK
+{
+  "name": "Coustard", 
+  "designer": "Vernon Adams", 
+  "license": "OFL", 
+  "visibility": "External", 
+  "category": "Serif", 
+  "size": 38937, 
+  "fonts": [
+    {
+      "name": "Coustard", 
+      "postScriptName": "Coustard", 
+      "fullName": "Coustard", 
+      "style": "normal", 
+      "weight": 400, 
+      "filename": "Coustard-Regular.ttf", 
+      "copyright": "Copyright (c) 2011 by vernon adams. All rights reserved. with\nReserved Font Names \"Coustard\" and \"Coustard Regular\". This\nFont Software is licensed under the SIL Open Font License, Version\n1.1. This license is available with a FAQ at:\nhttp://scripts.sil.org/OFL"
+    }, 
+    {
+      "name": "Coustard", 
+      "postScriptName": "Coustard-Black", 
+      "fullName": "Coustard-Black", 
+      "style": "normal", 
+      "weight": 900, 
+      "filename": "Coustard-Black-TTF.ttf", 
+      "copyright": "Copyright (c) 2011 by vernon adams. All rights reserved. with\nReserved Font Names \"Coustard\" and \"Coustard Black\". This\nFont Software is licensed under the SIL Open Font License, Version\n1.1. This license is available with a FAQ at:\nhttp://scripts.sil.org/OFL"
+    }, 
+    {
+      "name": "Coustard", 
+      "postScriptName": "Coustard-Black", 
+      "fullName": "Coustard-Black", 
+      "style": "normal", 
+      "weight": 900, 
+      "filename": "Coustard-Bold.ttf", 
+      "copyright": "Copyright (c) 2011 by vernon adams. All rights reserved. with\nReserved Font Names \"Coustard\" and \"Coustard Black\". This\nFont Software is licensed under the SIL Open Font License, Version\n1.1. This license is available with a FAQ at:\nhttp://scripts.sil.org/OFL"
+    }, 
+    {
+      "name": "Coustard", 
+      "postScriptName": "Coustard-Black", 
+      "fullName": "Coustard-Black", 
+      "style": "normal", 
+      "weight": 900, 
+      "filename": "Coustard-Heavy.ttf", 
+      "copyright": "Copyright (c) 2011 by vernon adams. All rights reserved. with\nReserved Font Names \"Coustard\" and \"Coustard Black\". This\nFont Software is licensed under the SIL Open Font License, Version\n1.1. This license is available with a FAQ at:\nhttp://scripts.sil.org/OFL"
+    }, 
+    {
+      "name": "Coustard", 
+      "postScriptName": "Coustard", 
+      "fullName": "Coustard", 
+      "style": "normal", 
+      "weight": 400, 
+      "filename": "Coustard-Regular-TTF.ttf", 
+      "copyright": "Copyright (c) 2011 by vernon adams. All rights reserved. with\nReserved Font Names \"Coustard\" and \"Coustard Regular\". This\nFont Software is licensed under the SIL Open Font License, Version\n1.1. This license is available with a FAQ at:\nhttp://scripts.sil.org/OFL"
+    }
+  ], 
+  "subsets": [
+    "latin", 
+    "menu"
+  ], 
+  "dateAdded": "2011-08-10"
+}
